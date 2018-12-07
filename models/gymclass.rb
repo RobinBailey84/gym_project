@@ -22,7 +22,7 @@ class GymClass
   def self.all()
     sql = "SELECT * FROM gymclasses"
     gymclasses = SqlRunner.run(sql)
-    result = gymclasses.map{|gymclass| GymClass.new(gymclass)}
+    return gymclasses.map{|gymclass| GymClass.new(gymclass)}
   end
 
   def update()

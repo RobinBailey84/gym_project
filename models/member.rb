@@ -20,8 +20,7 @@ class Member
   def self.all()
     sql = "SELECT * FROM members"
     members = SqlRunner.run(sql)
-    result = members.map{|member| Member.new(member)}
-    return result
+    return members.map{|member| Member.new(member)}
   end
 
   def update()
@@ -29,7 +28,7 @@ class Member
     values = [@name, @gold_membership]
     SqlRunner.run(sql, values)
   end
-  
+
   def self.delete_all()
     sql = "DELETE FROM members"
     SqlRunner.run(sql)
