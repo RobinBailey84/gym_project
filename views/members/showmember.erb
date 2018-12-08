@@ -1,5 +1,5 @@
 <p>Name: <%= @member.name %></p>
-<p>gold_membership <%= @member.gold_membership %></p>
+<p>gold_membership: <%= @member.gold_membership %></p>
 
 <form action="/members/<%=@member.id %>/delete" method="post">
   <label for="">Delete Member</label>
