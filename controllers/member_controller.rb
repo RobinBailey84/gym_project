@@ -18,3 +18,20 @@ post '/members' do
   @members.save()
   redirect('/members')
 end
+
+post '/members/:id/delete' do
+  @member = Member.find(params[:id].to_i())
+  @member.delete()
+  redirect('/members')
+end
+
+get '/members/:id/edit' do
+  @member = Member.find(params[:id].to_i())
+  erb(:edit)
+end
+
+post '/members/:id' do
+  @members = Member.new(params)
+  @member.update()
+  redirect('members')
+end

@@ -20,7 +20,7 @@ class Member
   def self.all()
     sql = "SELECT * FROM members"
     results = SqlRunner.run(sql)
-    return results.map{ |member| Member.new(member ) }
+    return results.map{ |member| Member.new(member)}
   end
 
   def update()
