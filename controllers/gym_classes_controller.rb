@@ -11,5 +11,5 @@ end
 post '/gymclasses' do
   @gymclasses = GymClass.new(params)
   @gymclasses.save()
-  redirect('/classes')
+  redirect('/gymclasses')
 end
