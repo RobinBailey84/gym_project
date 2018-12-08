@@ -5,7 +5,7 @@ class GymClass
   attr_accessor(:id, :name, :class_date, :class_time, :capacity)
 
   def initialize(options)
-    @id = options['id'].to_i if options ['id']
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @class_date = options['class_date']
     @class_time = options['class_time']
@@ -21,8 +21,8 @@ class GymClass
 
   def self.all()
     sql = "SELECT * FROM gymclasses"
-    gymclasses = SqlRunner.run(sql)
-    return gymclasses.map{|gymclass| GymClass.new(gymclass)}
+    results = SqlRunner.run(sql)
+    return results.map{|gymclass| GymClass.new(gymclass)}
   end
 
   def update()

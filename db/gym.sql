@@ -1,6 +1,7 @@
+DROP TABLE bookings;
 DROP TABLE members;
 DROP TABLE gymclasses;
-DROP TABLE bookings;
+
 
 CREATE TABLE members(
   id SERIAL PRIMARY KEY,

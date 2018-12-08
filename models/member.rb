@@ -5,7 +5,7 @@ class Member
   attr_accessor(:id, :name, :gold_membership)
 
   def initialize(options)
-    @id = options['id'].to_i if options ['id']
+    @id = options['id'].to_i if options['id']
     @name = options['name']
     @gold_membership = options['gold_membership']
   end
@@ -19,8 +19,8 @@ class Member
 
   def self.all()
     sql = "SELECT * FROM members"
-    members = SqlRunner.run(sql)
-    return members.map{|member| Member.new(member)}
+    results = SqlRunner.run(sql)
+    return results.map{ |member| Member.new(member ) }
   end
 
   def update()
@@ -38,6 +38,14 @@ class Member
     sql = "DELETE FROM members WHERE id = $1"
     values = [@id]
     SqlRunner.run(sql, values)
+  end
+
+  def self.find(id)
+    sql = "SELECT * FROM members WHERE id = $1"
+    values = [id]
+    member = SqlRunner.run(sql, values)
+    result = Member.new(member.first)
+    return result
   end
 
 end
