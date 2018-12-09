@@ -1,0 +1,23 @@
+<h1>Choose a Class</h1>
+
+<form action="/bookings" method="post">
+  <label>
+    Choose a Class:
+    <select name="gymclass_id">
+    <% for selected in @gymclasses %>
+    <option value="<%= selected.id %>"><%= selected.name %>, <%= selected.class_date %>, <%= selected.class_time %></option>
+    <% end %>
+    </select>
+  </label>
+
+  <label>
+    Select a Member:
+    <select name="member_id">
+      <% for member in @members %>
+      <option value="<%= member.id %>"><%= member.name %>, <%= member.gold_membership %></option>
+      <% end %>
+    </select>
+  </label>
+
+  <input type="submit" values="Make Booking">
+</form>
