@@ -50,4 +50,12 @@ class GymClass
     return result
   end
 
+  def members()
+    sql = "SELECT members.* FROM members INNER JOIN bookings ON members.id = bookings.member_id WHERE bookings.gymclass_id = $1"
+    values = [@id]
+    member_array = SqlRunner.run(sql, values)
+    members = member_array.map{|member_hash| Member.new(member_hash)}
+    return members
+  end
+
 end
