@@ -1,14 +1,14 @@
 <h1>Update Member</h1>
 
-<form action="/members/<%=@member.id%>" method="post">
+<form action="/members/<%= @member.id %>" method="post">
 
 <label for="name">Name:</label>
-<input type="text" name="name" value="<%=@member.name%>">
+<input type="text" name="name" value="<%= @member.name %>">
 
 <label for="gold_membership">Gold Membership:</label>
 <select name="gold_membership">
-  <option selected value="true" value="<%=@member.gold_membership%>">True</option>
-  <option selected value="false" value="<%=@member.gold_membership%>">False</option>
+  <option selected value="true" value="<%= @member.gold_membership %>">True</option>
+  <option selected value="false" value="<%= @member.gold_membership %>">False</option>
 </select>
 
 <input type="submit" Value="Edit Now">

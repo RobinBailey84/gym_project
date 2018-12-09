@@ -8,8 +8,19 @@ get '/gymclasses/new' do
   erb(:"classes/new")
 end
 
+get '/classes/:id' do
+  @gymclass = GymClass.find(params[:id].to_i())
+  erb(:"classes/showclass")
+end
+
 post '/gymclasses' do
   @gymclasses = GymClass.new(params)
   @gymclasses.save()
+  redirect('/gymclasses')
+end
+
+post 'gymclasses/:id/delete' do
+  @gymclass. GymClass.find(params[:id].to_i())
+  @gymclass.delete()
   redirect('/gymclasses')
 end

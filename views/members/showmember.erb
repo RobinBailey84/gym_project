@@ -1,9 +1,9 @@
 <p>Name: <%= @member.name %></p>
 <p>gold_membership: <%= @member.gold_membership %></p>
 
-<form action="/members/<%=@member.id %>/delete" method="post">
+<form action="/members/<%= @member.id %>/delete" method="post">
   <label for="">Delete Member</label>
   <input type="submit" value="Yes">
 </form>
 
-<p><a href="/members/<%=@member.id%>/edit">Update Member</a></p>
+<p><a href="/members/<%= @member.id%>/edit">Update Member</a></p>
