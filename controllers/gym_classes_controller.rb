@@ -30,7 +30,7 @@ get '/gymclasses/:id/edit' do
   erb(:"classes/edit")
 end
 
-post '/classes/:id' do
+post '/gymclasses/:id' do
   @gymclass = GymClass.new(params)
   @gymclass.update()
   redirect('/gymclasses')

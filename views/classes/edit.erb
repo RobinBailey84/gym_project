@@ -1,0 +1,21 @@
+<h1>Update Class</h1>
+
+<form action="/gymclasses/<%= @gymclass.id %>" method="post">
+
+  <input type="hidden" value="<%= @gymclass.id %>">
+
+  <label for="name">Class Name:</label>
+  <input type="text" name="name" value="<%= @gymclass.name %>">
+
+  <label for="class_date">Class Date:</label>
+  <input type="text" name="class_date" value="<%= @gymclass.class_date %>">
+
+  <label for="class_time">Class Time:</label>
+  <input type="FLOAT" name="class_time" value="<%= @gymclass.class_time %>">
+
+  <label for="capacity">Capacity:</label>
+  <input type="INTEGER" name="capacity" value="<%= @gymclass.capacity %>">
+
+  <input type="submit" Value="Update Class">
+
+</form>
