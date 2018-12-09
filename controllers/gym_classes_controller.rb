@@ -19,8 +19,19 @@ post '/gymclasses' do
   redirect('/gymclasses')
 end
 
-post 'gymclasses/:id/delete' do
-  @gymclass. GymClass.find(params[:id].to_i())
+post '/gymclasses/:id/delete' do
+  @gymclass = GymClass.find(params[:id].to_i())
   @gymclass.delete()
+  redirect('/gymclasses')
+end
+
+get '/gymclasses/:id/edit' do
+  @gymclass = GymClass.find(params[:id].to_i())
+  erb(:"classes/edit")
+end
+
+post '/classes/:id' do
+  @gymclass = GymClass.new(params)
+  @gymclass.update()
   redirect('/gymclasses')
 end
