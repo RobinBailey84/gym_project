@@ -1,0 +1,7 @@
+<h1>Confirmed Bookings</h1>
+
+<ul>
+  <% for booking in @gymclass.members %>
+    <li><%= booking.name %>, <%= booking.id %></li>
+    <% end %>
+</ul>

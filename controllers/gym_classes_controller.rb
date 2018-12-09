@@ -35,3 +35,8 @@ post '/gymclasses/:id' do
   @gymclass.update()
   redirect('/gymclasses')
 end
+
+get '/gymclasses/:id/view' do
+  @gymclass = GymClass.find(params[:id].to_i())
+  erb(:"classes/view")
+end
