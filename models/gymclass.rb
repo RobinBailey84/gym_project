@@ -27,7 +27,7 @@ class GymClass
 
   def update()
     sql = "UPDATE gymclasses SET (name, class_date, class_time, capacity) = ($1, $2, $3, $4) WHERE id = $5"
-    values = [@name, @class_date, @class_time, @capacity]
+    values = [@name, @class_date, @class_time, @capacity, @id]
     SqlRunner.run(sql, values)
   end
 
@@ -56,6 +56,13 @@ class GymClass
     member_array = SqlRunner.run(sql, values)
     members = member_array.map{|member_hash| Member.new(member_hash)}
     return members
+  end
+
+  def check_class_is_full()
+    if members().count > @capacity
+      return true
+    end
+    return false
   end
 
 end

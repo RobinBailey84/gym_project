@@ -35,9 +35,4 @@ def delete()
   SqlRunner.run(sql, values)
 end
 
-
-
-
-
-
 end

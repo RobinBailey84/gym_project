@@ -4,11 +4,14 @@
   <label>
     Choose a Class:
     <select name="gymclass_id">
-    <% for selected in @gymclasses %>
+    <% for selected in @available_classes %>
     <option value="<%= selected.id %>"><%= selected.name %>, <%= selected.class_date %>, <%= selected.class_time %></option>
     <% end %>
     </select>
   </label>
+
+
+
 
   <label>
     Select a Member:
@@ -19,7 +22,6 @@
     </select>
   </label>
 
-  <%= if @gymclasses.members.count >= @gymclasses.capacity %>
 
   <input type="submit" values="Make Booking">
 </form>
