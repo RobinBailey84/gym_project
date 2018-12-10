@@ -16,6 +16,12 @@
   <label for="capacity">Capacity:</label>
   <input type="INTEGER" name="capacity" value="<%= @gymclass.capacity %>">
 
+  <label for="peak_time">Peak Time:</label>
+  <select name="peak_time">
+    <option selected value="true" value="<%= @gymclass.peak_time %>">True</option>
+    <option selected value="false" value="<%= @gymclass.peak_time %>">False</option>
+  </select>
+
   <input type="submit" Value="Update Class">
 
 </form>

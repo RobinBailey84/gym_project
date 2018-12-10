@@ -18,7 +18,8 @@ member1 = Member.new({
     "name" => "Yoga",
     "class_date" => "20/12/2018",
     "class_time" => 15.00,
-    "capacity" => 10
+    "capacity" => 10,
+    "peak_time" => false
     })
   gymclass1.save()
 

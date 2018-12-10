@@ -25,11 +25,6 @@ get '/bookings/:id' do
   erb(:"bookings/removebooking")
 end
 
-# get '/bookings/removebooking' do
-#   @booking = Booking.all()
-#   erb(:"bookings/removebooking")
-# end
-
 post '/bookings' do
   @booking = Booking.new(params)
   @booking.save

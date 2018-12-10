@@ -14,7 +14,8 @@ CREATE TABLE gymclasses(
   name VARCHAR(255),
   class_date VARCHAR,
   class_time FLOAT,
-  capacity INTEGER
+  capacity INTEGER,
+  peak_time BOOLEAN
 );
 
 CREATE TABLE bookings(
