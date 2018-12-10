@@ -2,6 +2,7 @@
 
 <ul>
   <% for booking in @gymclass.members %>
-    <li><%= booking.name %>, <%= booking.id %></li>
+    <li>Member Name: <%= booking.name %>, Member ID: <%= booking.id %></li>
     <% end %>
+    <li>Class Total: <%= @gymclass.members.count %></li>
 </ul>
