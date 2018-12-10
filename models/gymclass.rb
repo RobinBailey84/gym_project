@@ -9,7 +9,7 @@ class GymClass
     @name = options['name']
     @class_date = options['class_date']
     @class_time = options['class_time']
-    @capacity = options['capacity']
+    @capacity = options['capacity'].to_i()
   end
 
   def save()

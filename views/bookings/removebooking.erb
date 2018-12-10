@@ -1,0 +1,15 @@
+<h1>Remove a Booking</h1>
+
+<% for booking in @booking %>
+<hr />
+
+<p>Class: <%= booking.gymclass_id %></p>
+<p>Member: <%= booking.member_id %></p>
+
+
+<form action="/bookings/delete" method="post">
+<label for="">Remove From Class</label>
+<input type="submit" value="Yes">
+</form>
+<% end %>
+<hr />

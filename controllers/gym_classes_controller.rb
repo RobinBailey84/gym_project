@@ -1,3 +1,5 @@
+require_relative('../models/gymclass')
+
 get '/gymclasses' do
   @gymclasses = GymClass.all()
   erb(:"classes/index")
