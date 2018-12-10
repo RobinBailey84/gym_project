@@ -20,10 +20,15 @@ get '/bookings/new' do
   erb(:"bookings/new")
 end
 
-get '/bookings/removebooking' do
-  @booking = Booking.all()
+get '/bookings/:id' do
+  @bookings = Booking.find(params[:id].to_i())
   erb(:"bookings/removebooking")
 end
+
+# get '/bookings/removebooking' do
+#   @booking = Booking.all()
+#   erb(:"bookings/removebooking")
+# end
 
 post '/bookings' do
   @booking = Booking.new(params)
@@ -31,7 +36,8 @@ post '/bookings' do
   redirect('/bookings')
 end
 
-post '/bookings/delete' do
+post '/bookings/:id/delete' do
+  @booking = Booking.find(params[:id].to_i())
   @booking.delete()
   redirect('/bookings')
 end

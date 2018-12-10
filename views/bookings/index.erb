@@ -1,4 +1,13 @@
 
 <p><a href="/bookings/new">Make a Booking</a></p>
 
-<p><a href="/bookings/removebooking">Remove a Booking</a></p>
+
+<hr />
+<% for booking in @bookings %>
+<p>Class: <%= booking.gymclass_id %></p>
+<p>Member: <%= booking.member_id %></p>
+
+
+<p><a href="/bookings/<%= booking.id %>">Remove a Booking</a></p>
+<hr />
+<% end %>
