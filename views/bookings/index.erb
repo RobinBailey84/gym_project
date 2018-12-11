@@ -4,8 +4,8 @@
 
 <hr />
 <% for booking in @bookings %>
-<p>Class: <%= booking.gymclass_id %></p>
-<p>Member: <%= booking.member_id %></p>
+<p>Class: <%= booking.gym_class.name %></p>
+<p>Member: <%= booking.member.name %></p>
 
 
 <p><a href="/bookings/<%= booking.id %>">Remove a Booking</a></p>

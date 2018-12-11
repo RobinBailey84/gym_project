@@ -43,4 +43,18 @@ def self.find(id)
   return result
 end
 
+def member()
+  sql = "SELECT * FROM members WHERE id = $1"
+  values = [@member_id]
+  results = SqlRunner.run(sql, values)
+  return Member.new(results.first)
+end
+
+def gym_class()
+  sql = "SELECT * FROM gymclasses WHERE id = $1"
+  values = [@gymclass_id]
+  results = SqlRunner.run(sql, values)
+  return GymClass.new(results.first)
+end
+
 end
