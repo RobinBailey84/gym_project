@@ -1,10 +1,28 @@
-nav {
-  background-color:
-  text-transform: uppercase;
-  color: green;
+ul {
+  /* position: fixed; */
+  list-style-type: none;
+  margin: 10px;
   padding: 10px;
-  position: relative;
-  top: 0
+  overflow: hidden;
+  background-color: grey;
+}
+
+li {
+float: left;
+border-right:1px solid #bbb;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+li a:hover {
+  background-color: green;
 }
 
 body {
