@@ -60,7 +60,7 @@ class GymClass
   end
 
   def check_class_is_full()
-    if members().count > @capacity
+    if members().count >= @capacity
       return true
     end
     return false
