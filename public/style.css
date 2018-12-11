@@ -15,7 +15,8 @@ body {
   background-image: url('/images/gym.jpg');
   background-size: 75%;
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: right center;
+  background-attachment: fixed;
 }
 
 p {
@@ -39,4 +40,8 @@ p {
 
 .button:hover {
   background-color: green;
+}
+
+h1 {
+  font-family: sans-serif;
 }

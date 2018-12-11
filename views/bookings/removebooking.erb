@@ -1,7 +1,7 @@
-<p>Class: <%= @bookings.gymclass_id %></p>
-<p>Member: <%= @bookings.member_id %></p>
+<p>Class: <%= @bookings.gym_class.name %></p>
+<p>Member: <%= @bookings.member.name %></p>
 
 <form action="/bookings/<%= @bookings.id %>/delete" method="post">
   <label for="">Delete Booking</label>
-  <input type="submit" value="Yes">
+  <input class="button" type="submit" value="Yes">
 </form>

@@ -1,7 +1,9 @@
-<label>
-  Select a Member:  </label>
-<ul>
+<h1>Select a Member:</h1>
+<hr />
   <% for member in @members %>
-  <a href="/bookings/new/<%= member.id %>"><%= member.name %>, <%= member.gold_membership %></a>
-  <% end %>
-</ul>
+  <p>Name: <%= member.name %> </p>
+  <p>Membership: <%= member.gold_membership %></p>
+  <p><a class="button" href="/bookings/new/<%= member.id %>">Select Member</a></p>
+
+<hr />
+<% end %>
