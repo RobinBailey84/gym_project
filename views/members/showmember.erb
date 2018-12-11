@@ -1,6 +1,9 @@
 <p>Name: <%= @member.name %></p>
 <p>gold_membership: <%= @member.gold_membership %></p>
 
+  <label for="">Notes:</label>
+  <textarea name="name" rows="8" cols="80"></textarea>
+
 <form action="/members/<%= @member.id %>/delete" method="post">
   <label for="">Delete Member</label>
   <input class="button" type="submit" value="Yes">

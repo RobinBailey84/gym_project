@@ -45,15 +45,15 @@ p {
 .button {
   text-decoration: none;
   color: black;
-  padding:5px 15px;
+  padding:10px 15px;
   margin: 10px;
-  background:#ccc;
+  background: #B8B8B8;
   border:0 none;
   cursor:pointer;
   -webkit-border-radius: 5px;
   border-radius: 5px; */
   font-family: sans-serif;
-  position:
+  font-weight: bold;
 }
 
 .button:hover {
@@ -61,5 +61,18 @@ p {
 }
 
 h1 {
+  font-family: sans-serif;
+}
+
+label {
+  font-family: sans-serif;
+}
+
+input {
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+option {
   font-family: sans-serif;
 }
