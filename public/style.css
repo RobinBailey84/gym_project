@@ -1,10 +1,13 @@
 ul {
   /* position: fixed; */
   list-style-type: none;
+  top: 0;
+  left: 0;
   margin: 10px;
   padding: 10px;
   overflow: hidden;
   background-color: grey;
+  width: 100%;
 }
 
 li {
@@ -76,3 +79,17 @@ input {
 option {
   font-family: sans-serif;
 }
+
+.logo {
+  font-style: courier;
+}
+
+/* .footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: white;
+  text-align: center;
+} */
