@@ -9,7 +9,7 @@ get '/gymclasses/new' do
   @gymclasses = GymClass.all()
   erb(:"classes/new")
 end
-
+#shows all class details
 get '/classes/:id' do
   @gymclass = GymClass.find(params[:id].to_i())
   erb(:"classes/showclass")

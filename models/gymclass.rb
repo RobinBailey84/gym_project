@@ -66,4 +66,5 @@ class GymClass
     return false
   end
 
+
 end

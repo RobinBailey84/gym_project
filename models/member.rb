@@ -48,4 +48,11 @@ class Member
     return result
   end
 
+  def check_membership()
+    if @peak_time == true && @gold_membership == false
+      return true
+    end
+    return false
+  end
+
 end
