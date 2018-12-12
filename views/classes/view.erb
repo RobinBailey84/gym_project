@@ -1,8 +1,8 @@
 <h1>Confirmed Bookings</h1>
 
-<ul>
+<!-- <ul> -->
   <% for booking in @gymclass.members %>
-    <li>Member Name: <%= booking.name %>, Member ID: <%= booking.id %></li>
+    <p>Member Name: <%= booking.name %>, Member ID: <%= booking.id %></p>
     <% end %>
-    <li>Class Total: <%= @gymclass.members.count %></li>
-</ul>
+    <p>Class Total: <%= @gymclass.members.count %></p>
+<!-- </ul> -->
