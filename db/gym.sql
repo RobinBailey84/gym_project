@@ -12,8 +12,8 @@ CREATE TABLE members(
 CREATE TABLE gymclasses(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
-  class_date VARCHAR,
-  class_time FLOAT,
+  class_date DATE,
+  class_time TIME,
   capacity INTEGER,
   peak_time BOOLEAN
 );
