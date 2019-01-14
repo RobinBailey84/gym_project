@@ -23,6 +23,9 @@ post '/bookings' do
 end
 
 # get '/bookings/new/:member_id'
+# pass through the member id as a param
+# find the member
+# do logic to see if gold membership/peak time
 get '/bookings/new/:member_id' do
   @member = Member.find(params[:member_id])
   @gymclasses = GymClass.all()
@@ -40,9 +43,7 @@ get '/bookings/new/:member_id' do
 end
 
 
-# pass through the member id as a param
-# find the member
-# do logic to see if gold membership/peak time
+
 
 #deleting booking
 get '/bookings/:id' do

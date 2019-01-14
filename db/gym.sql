@@ -13,7 +13,7 @@ CREATE TABLE gymclasses(
   id SERIAL PRIMARY KEY,
   name VARCHAR(255),
   class_date DATE,
-  class_time TIME,
+  class_time FLOAT,
   capacity INTEGER,
   peak_time BOOLEAN
 );
